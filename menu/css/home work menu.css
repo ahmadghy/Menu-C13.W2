@@ -1,49 +1,57 @@
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+ background-color: #FFFB73; 
 }
 
 .main {
-	margin: 10px 15px;
+  margin: 10px 15px;
 }
 
 .main li {
-	list-style-type: none;
-	background-color: #FFD840;
-	float: left;
+  list-style-type: none;
+  background-color: #FFD840;
+  float: left;
   position: relative;
-	border-radius: 10px;
+  border-radius: 10px;
 }
 
 .main li a {
-	text-decoration: none;
-	color: #3CA0D0;
-	white-space: nowrap;
-	padding: 10px;
-	display: block;
-	text-transform: capitalize;
-	font-size: 20px;
-	-webkit-transition:all 0.4s;
-  -moz-transition:all 0.4s;
-  -ms-transition:all 0.4s;
-  -o-transition:all 0.4s;
-  transition:all 0.4s;
+  text-decoration: none;
+  color: #3CA0D0;
+  white-space: nowrap;
+  padding: 10px;
+  display: block;
+  text-transform: capitalize;
+  font-size: 20px;
+  -webkit-transition:all 0.4s;
+  -moz-transition:all 0.5s;
+  -ms-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  transition:all 0.5s;
 }
 
 .main:after {
-	content: " ";
-	display: block;
-	clear: both;
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .main li:hover {
-	background-color: #FFCB00;
+  background-color: #FFCB00;
+}
+
+.main li:hover > a{
+  color: #03426A;
+  text-shadow: 1px 1px 1px #071871;
 }
 
 .main li:hover a {
-	padding: 10px 20px;
-	color: #03426A;
-	-webkit-transition:all 0.7s;
+  padding: 10px 20px;
+  -webkit-transition:all 0.7s;
   -moz-transition:all 0.7s;
   -ms-transition:all 0.7s;
   -o-transition:all 0.7s;
@@ -54,13 +62,15 @@
   min-width: 100%;
   top: 100%;
   left: 0;
+  overflow: hidden;
+  height: 0;
   position: absolute;
-  display: none;
   list-style-type: none;
-}
-
-.main li:hover menu {
-  display: block;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .main li li {
@@ -68,9 +78,45 @@
   white-space: nowrap;
 }
 
+.main li:hover menu {
+  height: 400%;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+ 
+.main li menu.submenu2 {
+  position: absolute;
+  list-style-type: none;
+  min-width: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 150%;
+  left: 50%;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.main li:hover menu.submenu2 {
+  opacity: 1;
+  display: block;
+  top: 100%;
+  left: 0;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
 .contact {
   font-size: 15px;
   font-family: arial;
-  color: #A67E00;
+  color: #015965;
   margin:0 20px  0;
 }
